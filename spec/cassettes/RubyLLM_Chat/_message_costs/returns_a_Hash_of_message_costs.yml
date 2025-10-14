@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://openrouter.ai/api/v1/generation?id=gen-1760464392-LASM4PMGAGlgjVqW5oTH
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <OPENROUTER_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - openrouter.ai
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Oct 2025 17:54:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Permissions-Policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      Referrer-Policy:
+      - no-referrer, strict-origin-when-cross-origin
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 98e8f0b77f854dfc-MCI
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"created_at":"2025-10-14T17:53:31.952438+00:00","model":"openai/gpt-5-nano-2025-08-07","app_id":null,"external_user":null,"streamed":true,"cancelled":false,"latency":4626,"moderation_latency":null,"generation_time":18515,"tokens_prompt":15,"tokens_completion":47,"native_tokens_prompt":14,"native_tokens_completion":885,"native_tokens_completion_images":0,"native_tokens_reasoning":832,"native_tokens_cached":0,"num_media_prompt":null,"num_input_audio_prompt":null,"num_media_completion":0,"num_search_results":null,"origin":"","is_byok":false,"finish_reason":"stop","native_finish_reason":"completed","usage":0.000351153,"api_type":"completions","id":"gen-1760464392-LASM4PMGAGlgjVqW5oTH","upstream_id":"resp_0cb38d55d4b130ee0168ee8e08c0608193a3fee5bce298db3d","total_cost":0.000351153,"cache_discount":null,"upstream_inference_cost":0,"provider_name":"OpenAI"}}'
+  recorded_at: Tue, 14 Oct 2025 17:54:09 GMT
+- request:
+    method: get
+    uri: https://openrouter.ai/api/v1/generation?id=gen-1760464411-qCWLq9ls1dcJRNEWvJ2P
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <OPENROUTER_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - openrouter.ai
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Oct 2025 17:54:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Permissions-Policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      Referrer-Policy:
+      - no-referrer, strict-origin-when-cross-origin
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 98e8f0b82a90e65d-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"created_at":"2025-10-14T17:54:08.480407+00:00","model":"openai/gpt-5-nano-2025-08-07","app_id":null,"external_user":null,"streamed":true,"cancelled":false,"latency":2710,"moderation_latency":null,"generation_time":35985,"tokens_prompt":79,"tokens_completion":208,"native_tokens_prompt":80,"native_tokens_completion":3286,"native_tokens_completion_images":0,"native_tokens_reasoning":3072,"native_tokens_cached":0,"num_media_prompt":null,"num_input_audio_prompt":null,"num_media_completion":0,"num_search_results":null,"origin":"","is_byok":false,"finish_reason":"stop","native_finish_reason":"completed","usage":0.001305216,"api_type":"completions","id":"gen-1760464411-qCWLq9ls1dcJRNEWvJ2P","upstream_id":"resp_68ee8e1bd92c81908bfc65e0ef86a4f2","total_cost":0.001305216,"cache_discount":null,"upstream_inference_cost":0,"provider_name":"OpenAI"}}'
+  recorded_at: Tue, 14 Oct 2025 17:54:09 GMT
+recorded_with: VCR 6.3.1
