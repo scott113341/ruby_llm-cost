@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "ruby_llm-cost"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   spec.authors = ["Scott Hardy"]
   spec.email = ["scott.the.hardy@gmail.com"]
 
