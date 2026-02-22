@@ -42,17 +42,23 @@ module RubyLLM
 
       # OpenRouter's Generation API seems to not be read-after-write-consistent in that fetching
       # the generation sometimes 404's if you immediately fetch, hence the retries.
-      with_retries(count: 5, sleep_for: 0.5) do
-        gen_id = message.raw.body["id"]
-        uri = URI("#{@provider.api_base}/generation?id=#{gen_id}")
-        req = Net::HTTP::Get.new(uri, @provider.headers)
+      begin
+        with_retries(count: 60, sleep_for: 1) do
+          gen_id = message.raw.body["id"]
+          uri = URI("#{@provider.api_base}/generation?id=#{gen_id}")
+          req = Net::HTTP::Get.new(uri, @provider.headers)
 
-        res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
-          http.request(req)
+          res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+            http.request(req)
+          end
+
+          body = JSON.parse(res.body)
+          body["data"]["total_cost"]
         end
 
-        body = JSON.parse(res.body)
-        body["data"]["total_cost"]
+      rescue
+        # Return nil if cost-fetching permanently fails
+        nil
       end
     end
 

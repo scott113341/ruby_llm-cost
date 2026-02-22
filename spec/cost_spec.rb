@@ -40,6 +40,11 @@ RSpec.describe RubyLLM::Chat, :vcr do
       expect(chat.message_cost(chat.messages[3])).to(eq(m_3_cost))
     end
 
+    it "returns nil if the cost-fetching permanently fails" do
+      allow(chat).to(receive(:with_retries).and_raise("Skip"))
+      expect(chat.message_cost(chat.messages[1])).to(eq(nil))
+    end
+
     it "uses the cached value when present" do
       message = chat.messages[1]
 
